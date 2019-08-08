@@ -79,13 +79,15 @@
 
     $(function(){
         const httpGetTree = new XMLHttpRequest();
-        const getURLTree = 'http://localhost:3000/buildTree';
+        console.log(location.hostname);
+        const getURLTree = 'http://'+ location.hostname +':3000/buildTree';
+        console.log('url is =' + getURLTree);
         httpGetTree.open("GET", getURLTree);
         httpGetTree.send();
         httpGetTree.onreadystatechange = (e) => {
+
             let obj = httpGetTree.responseText;
             document.getElementById('tree-view').innerText = obj;
-            console.log(httpGetTree.responseText['status']);
         }
     });
 
