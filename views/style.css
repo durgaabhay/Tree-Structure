@@ -1,0 +1,10 @@
+@media (min-width: 800px){
+    .container {
+        width: 500px;
+        text-align : center;
+        display : inline-block;
+        top : 20%;
+        position : absolute
+    }
+}
+
